@@ -10,15 +10,14 @@
 #import "Character.h"
 
 typedef NS_ENUM(NSInteger, DrawingOrder) {
-    DrawingOrderPipes,
-    DrawingOrderGround,
+    DrawingOrderPipesCharacterwingOrderGround,
     DrawingOrderHero
 };
 
 @interface GamePlayScene : CCNode <CCPhysicsCollisionDelegate>
 {
     //character = (Character*)[CCBReader load:@"Character"];
-    [physicsNode addChild:character];
+    [[CCPhysicsNode addChild:"character"]
 -(void) initialize;
 -(void) addObstacle;
 -(void) showScore;
